@@ -7,6 +7,7 @@ import SearchBar from "../../components/SearchBar";
 import { CATEGORIES } from "../../constants/data";
 import CategoryList from "../../components/Categories/CategoryList";
 import Categories from "../../components/Categories/Categories";
+import RecommendedPlace from "../../components/Recommended/RecommendedPlace";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('Location');
@@ -15,7 +16,7 @@ const Home = () => {
   };
   return (
     <SafeAreaView className={`bg-white`}>
-      <ScrollView className={`w-full h-full`}>
+      <ScrollView className={`w-full h-full bg-white `}>
         <View>
           <View className={`flex flex-row justify-between`}>
             <View className={`m-8`}>
@@ -40,6 +41,7 @@ const Home = () => {
             onCategoryPress={handleCategoryPress}
           />
           <Categories selectedCategory={selectedCategory} />
+          <RecommendedPlace/>
         </View>
       </ScrollView>
       <StatusBar style="dark" />

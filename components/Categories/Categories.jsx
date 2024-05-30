@@ -1,8 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet,TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import CategoryDetails from "./CategoryDetails";
 import { LOCATIONS, HOTELS } from "../../constants/data";
-
 
 const Categories = ({ selectedCategory }) => {
   const getCategoryData = () => {
@@ -21,7 +20,9 @@ const Categories = ({ selectedCategory }) => {
       <View className="flex flex-row justify-between">
         <Text style={styles.header}>Popular</Text>
         <TouchableOpacity>
-          <Text className='text-secondary font-secondaryFont text-base'>See All</Text>
+          <Text className="text-secondary font-secondaryFont text-base">
+            See All
+          </Text>
         </TouchableOpacity>
       </View>
       <View style={styles.detailsSection}>
@@ -34,7 +35,8 @@ const Categories = ({ selectedCategory }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    paddingHorizontal: 16,
+    paddingTop: 10,
     backgroundColor: "#fff",
     marginHorizontal: 8,
   },
