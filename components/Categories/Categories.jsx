@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet,TouchableOpacity } from "react-native";
 import CategoryDetails from "./CategoryDetails";
-import { LOCATIONS, HOTELS } from "../constants/data";
+import { LOCATIONS, HOTELS } from "../../constants/data";
 
 
 const Categories = ({ selectedCategory }) => {

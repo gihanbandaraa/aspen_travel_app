@@ -5,8 +5,8 @@ import { StatusBar } from "expo-status-bar";
 import { icons } from "../../constants";
 import SearchBar from "../../components/SearchBar";
 import { CATEGORIES } from "../../constants/data";
-import CategoryList from "../../components/CategoryList";
-import Categories from "../../components/Categories";
+import CategoryList from "../../components/Categories/CategoryList";
+import Categories from "../../components/Categories/Categories";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('Location');
