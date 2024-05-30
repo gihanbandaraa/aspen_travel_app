@@ -55,12 +55,12 @@ export const HOTELS = [
 
 export const RECOMMENDED = [
   {
-    title: "Alley Palace",
+    title: "Explore Aspen",
     imageUrl: images.hotel1,
     disc:' 4N/5D'
   },
   {
-    title: "Geneva",
+    title: "Luxurius Aspen",
     imageUrl: images.location2,
     disc:' 2N/3D'
   },

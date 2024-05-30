@@ -28,6 +28,7 @@ const TabsLayout = () => {
             borderTopRightRadius: 50,
             borderTopLeftRadius: 50,
             paddingHorizontal: 40,
+            elevation: 8,
           },
         }}
       >

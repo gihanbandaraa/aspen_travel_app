@@ -79,7 +79,9 @@ const CategoryDetails = ({ data }) => {
           showsHorizontalScrollIndicator={false}
         />
       ) : (
-        <Text style={styles.emptyMessage}>Currently No items available in this category</Text>
+        <Text style={[styles.emptyMessage, styles.newContainer]}>
+          Currently No items available in this category
+        </Text>
       )}
     </View>
   );
@@ -88,13 +90,16 @@ const CategoryDetails = ({ data }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  newContainer: {
+    marginBottom: "72%",
   },
   emptyMessage: {
     fontSize: 18,
-    color: 'grey',
-    textAlign: 'center',
+    color: "grey",
+    textAlign: "center",
     fontFamily: "Montserrat",
   },
   contentContainer: {
@@ -122,7 +127,6 @@ const styles = StyleSheet.create({
     fontFamily: "CircularXX",
     fontSize: 16,
     marginLeft: 5,
-   
   },
   imageBackground: {
     width: 188,
@@ -133,11 +137,11 @@ const styles = StyleSheet.create({
     display: "flex",
     justifyContent: "flex-end",
   },
-  favoriteButton:{
+  favoriteButton: {
     backgroundColor: "#F3F8FE",
-    padding:5,
+    padding: 5,
     borderRadius: 20,
-  }
+  },
 });
 
 export default CategoryDetails;

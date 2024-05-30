@@ -15,8 +15,8 @@ const Home = () => {
     setSelectedCategory(category);
   };
   return (
-    <SafeAreaView className={`bg-white`}>
-      <ScrollView className={`w-full h-full bg-white `}>
+    <SafeAreaView className={`bg-[#FFFFFF]`}>
+      <ScrollView className={` h-screen `}>
         <View>
           <View className={`flex flex-row justify-between`}>
             <View className={`m-8`}>

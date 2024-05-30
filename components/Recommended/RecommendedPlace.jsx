@@ -13,14 +13,14 @@ const RecommendedPlace = () => {
       <Text
         style={{
           position: "absolute",
-          fontSize: 14,
+          fontSize: 12,
           color: "white",
           right: 10,
           bottom: 14,
           backgroundColor: "#3A544F",
           padding: 4,
           color: "#FFFFFF",
-          borderRadius: 10,
+          borderRadius: 20,
           borderWidth: 2,
           borderColor: "white",
           fontFamily: "Montserrat700",
