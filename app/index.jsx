@@ -9,7 +9,7 @@ export default function App() {
   return (
     <ImageBackground
       source={images.background}
-      className="flex-1 w-full"
+      className="flex-1 w-full bg-white h-full"
       resizeMode="cover"
     >
       <SafeAreaView className="flex-1 w-full">

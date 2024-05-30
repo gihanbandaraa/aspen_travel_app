@@ -5,8 +5,9 @@ import { StatusBar } from "expo-status-bar";
 import { icons } from "../../constants";
 import SearchBar from "../../components/SearchBar";
 import { CATEGORIES } from "../../constants/data";
-import CategoryList from "../../components/CategoryList";
-import Categories from "../../components/Categories";
+import CategoryList from "../../components/Categories/CategoryList";
+import Categories from "../../components/Categories/Categories";
+import RecommendedPlace from "../../components/Recommended/RecommendedPlace";
 
 const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('Location');
@@ -14,8 +15,8 @@ const Home = () => {
     setSelectedCategory(category);
   };
   return (
-    <SafeAreaView className={`bg-white`}>
-      <ScrollView className={`w-full h-full`}>
+    <SafeAreaView className={`bg-[#FFFFFF]`}>
+      <ScrollView className={` h-screen `}>
         <View>
           <View className={`flex flex-row justify-between`}>
             <View className={`m-8`}>
@@ -40,6 +41,7 @@ const Home = () => {
             onCategoryPress={handleCategoryPress}
           />
           <Categories selectedCategory={selectedCategory} />
+          <RecommendedPlace/>
         </View>
       </ScrollView>
       <StatusBar style="dark" />
