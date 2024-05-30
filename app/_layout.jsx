@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from "react-native";
+import React, { useEffect } from "react";
+import { SplashScreen, Stack } from "expo-router";
+import {useFonts} from "expo-font";
 
-export default function App() {
+SplashScreen.preventAutoHideAsync();
+
+const RootLayout = () => {
+   const [fontsLoaded ,error] =useFonts({
+    "Hiatus" :require("../assets/fonts/Hiatus.ttf"),
+    "CircularXX" :require("../assets/fonts/CircularXX.otf"),
+    "Montserrat" :require("../assets/fonts/Montserrat-Regular.ttf"),
+    "Montserrat500" :require("../assets/fonts/Montserrat-Medium.ttf"),
+    "Montserrat700" :require("../assets/fonts/Montserrat-Bold.ttf"),
+   });
+   useEffect(()=>{
+    if (error) throw error;
+    if (fontsLoaded) SplashScreen.hideAsync();
+   },[fontsLoaded ,error])
+
+   if(!fontsLoaded && !error) return null;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Stack>
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+    </Stack>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default RootLayout;
+
